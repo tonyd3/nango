@@ -23,10 +23,10 @@ export default function Syncs() {
 
     useEffect(() => {
         const getSyncs = async () => {
-            const res = await getSyncsAPI();
+            let res = await getSyncsAPI();
 
             if (res?.status === 200) {
-                const data = await res.json();
+                let data = await res.json();
                 setSyncs(data);
             }
         };
