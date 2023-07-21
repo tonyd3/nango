@@ -15,7 +15,7 @@ export default function Syncs() {
     const [syncs, setSyncs] = useState<Sync[]>([]);
     const getSyncsAPI = useGetAllSyncsAPI();
 
-    const env = useStore((state) => state.cookieValue);
+    const env = useStore(state => state.cookieValue);
 
     useEffect(() => {
         setLoaded(false);
